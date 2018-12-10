@@ -66,7 +66,7 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
+  width: 500px;
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -218,22 +218,69 @@ input[type=submit] {
 }
 
 
+@keyframes example {
+  from {background-color:teal;color:#ffffff;}
+  to {background-color: rgb(248, 248, 41);color:teal;}
+}
 
+/* The element to apply the animation to */
+#logo{
+  background-color:teal;
+  color:#ffffff;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
 
 @media screen and (max-width: 980px) {
-  body {
-    color:black;
+  input[type=submit] {
+    margin-left: 40px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    color:black;
+  #logo {
+    float: left;
+    width: 400px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+   
+  
+  input[type=submit] {
+    margin-left: 40px;
   }
 }
 
 @media screen and (max-width: 640px) {
   header {
     position: static;
+  }
+
+  #logo{
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  input[type=submit] {
+    margin-left: 40px;
+  }
+
+  .main-section img{
+    display : block;
+    align-self: auto;
+    width: 100%;
+  }
+
+  .work img{
+    display : block;
+    align-self: auto;
+    width: 100%;
   }
 }
